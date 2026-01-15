@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnowSense – AI Snowboarding Guide</title>
+
+  <style>
+    /* ===== GLOBAL ===== */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background:
+        radial-gradient(1200px 600px at 50% -100px, rgba(255,255,255,0.06), transparent 60%),
+        #0b0f14;
+      color: #e5e7eb;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      height: 380px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding-top: 55px;
+      background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("tobias-keller-73F4pKoUkM0-unsplash.jpg") center / cover no-repeat;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 4.4rem;
+      font-weight: 850;
+      color: #f8fafc;
+      text-align: center;
+      text-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    }
+
+    header p {
+      margin-top: 14px;
+      font-size: 1.35rem;
+      color: rgba(248, 250, 252, 0.92);
+      text-align: center;
+      text-shadow: 0 4px 14px rgba(0,0,0,0.35);
+    }
+
+    /* ===== CONTENT ===== */
+    .container {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.10);
+      border-radius: 22px;
+      padding: 32px;
+      margin-bottom: 50px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 22px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+    }
+
+    .card h2 {
+      color: #f8fafc;
+      margin-top: 0;
+      font-size: 1.9rem;
+    }
+
+    .card p {
+      color: rgba(226, 232, 240, 0.88);
+      line-height: 1.65;
+      font-size: 1.05rem;
+    }
+
+    /* ===== VIDEO SECTION ===== */
+    .video-card video {
+      width: 100%;
+      border-radius: 16px;
+      margin-top: 20px;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.55);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 35px;
+      background: #070a10;
+      color: rgba(148, 163, 184, 0.9);
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div>
+      <h1>SportsSense</h1>
+      <p>Your AI-powered Snowboarding Guide</p>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="container">
+
+    <div class="card">
+      <img src="snowboarding.jpg" alt="Snowboarding scenery">
+      <h2>What is Snowboarding?</h2>
+      <p>
+        Snowboarding is a winter sport where riders descend snow-covered slopes
+        on a single board, using balance, body movement, and edge control to
+        steer and stop.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="dane-deaner-j5asemKMmQY-unsplash.jpg" alt="Snowboard gear">
+      <h2>Why Use SportsSense?</h2>
+      <p>
+        SportsSense acts as your personal snowboarding assistant. Ask questions
+        about gear, techniques, safety tips, destinations, or beginner advice —
+        anytime.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="karsten-winegeart-1hHLeBZy2kk-unsplash.jpg" alt="Snowboarder standing">
+      <h2>Try the AI Coach</h2>
+      <p>
+        Click the chat icon in the bottom corner and ask anything about
+        snowboarding.
+      </p>
+    </div>
+
+    <!-- ===== VIDEO SECTION (NEW) ===== -->
+    <div class="card video-card">
+      <h2>Snowboard Smarter with AI</h2>
+      <p>
+        Learn the basics of snowboarding and see how SnowSense helps you ask
+        smarter questions, improve faster, and ride with confidence.
+      </p>
+
+      <video controls>
+        <source src="Snowboard Smarter.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+  </div>
+
+  <!-- ===== CHATBOT ===== -->
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+    Chatbot.init({
+      chatflowid: "c2ebda47-13af-41c4-9093-c0e24bc6771a",
+      apiHost: "https://cloud.flowiseai.com"
+    });
+  </script>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2026 Sports Sense | Snowboarding Guide</p>
+  </footer>
+
+</body>
+</html>
